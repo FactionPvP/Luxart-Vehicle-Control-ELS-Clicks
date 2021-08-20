@@ -1,15 +1,26 @@
-Change Log:
-12/17/19 - New upgrade sound
-6/30/20 - Added sound for manual sirens
-7/10/20 - Fixed bugs for manual siren and horn
-8/20/21 - 3.0 Realism Released (More Info Below)
+<h1>Luxart Vehicle Control ELS Clicks</h1>
+
+A FiveM Script
+
+<H3>Change Log:</H3>
+<dl>
+  <dt>- 12/17/19 - New upgrade sound</dt>
+  <dt>- Added sound for manual sirens</dt>
+  <dt>- 3.0 Realism Released (More Info Below)</dt>
+</dl>
+
+<H3>3.0 Changes:</H3>
+
+<ul>
+  <li>New Light Reminder For Better Realism Gameplay (This Can Be Disabled In The client.lua Under Configurations)
+</li>
+  <li>New 3 Choices Of Click Sounds For More Options, I’ve Been Working With ShotsFired932 With New Sounds</li>
+  <li>Lowered Volume Click Sounds For More Enhanced Focused Gameplay
+(Volume Can Still Be Changed In client.lua)</li>
+</ul>
 
 
-3.0 Changes:
 
-New Light Reminder For Better Realism Gameplay (This Can Be Disabled In The client.lua Under Configurations)
+<h2>Click Sound Pack Install Guide:</h2>
 
-New 3 Choices Of Click Sounds For More Options, I’ve Been Working With ShotsFired932 With New Sounds
-
-Lowered Volume Click Sounds For More Enhanced Focused Gameplay
-(Volume Can Still Be Changed In client.lua)
+<img src="https://forum.cfx.re/uploads/default/original/4X/f/2/a/f2af25d406b0fa816dae58b86a83b1a46bf66ce8.gif"  />
