@@ -6,7 +6,7 @@ A FiveM Server Script
 
 <H3>Change Log:</H3>
 <dl>
-  <dt>- 3.0 Realism Released (More Info Below)</dt>
+<dt>- 3.0 Realism Released (More Info Below)</dt>
 </dl>
 
 <H3>3.0 Changes:</H3>
