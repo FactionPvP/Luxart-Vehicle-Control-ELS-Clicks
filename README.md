@@ -6,8 +6,6 @@ A FiveM Script
 
 <H3>Change Log:</H3>
 <dl>
-  <dt>- 12/17/19 - New upgrade sound</dt>
-  <dt>- Added sound for manual sirens</dt>
   <dt>- 3.0 Realism Released (More Info Below)</dt>
 </dl>
 
