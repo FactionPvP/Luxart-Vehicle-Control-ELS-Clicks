@@ -1,6 +1,6 @@
 --[[
 ---------------------------------------------------
-LUXART VEHICLE CONTROL ELS CLICKS (2.1 Bug Fix) (FOR FIVEM)
+LUXART VEHICLE CONTROL ELS CLICKS (3.0v Realism) (FOR FIVEM)
 ---------------------------------------------------
 Last revision: MAY 01 2017 (VERS. 1.01)
 Coded by Lt.Caine
