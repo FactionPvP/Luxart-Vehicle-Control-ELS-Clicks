@@ -42,6 +42,14 @@ local eModelsWithPcall =
 
 -- Change to false for no light beep reminder
 lightreminder = true
+
+
+-- these models will disabled regardless of emergency vehicle class
+local eModelsDisabled =
+{
+	"NONE",
+}
+
 ---------------------------------------------------
 
 local count_bcast_timer = 0
@@ -80,7 +88,7 @@ Citizen.Wait(100)
   ped_s = GetPlayerPed(player_s)
   veh = GetVehiclePedIsUsing(ped_s)
 		Citizen.Wait(7000)
-			if GetPedInVehicleSeat(veh, -1) == ped_s and IsVehicleSirenOn(veh) and GetVehicleClass(veh) == 18 and lightreminder then
+			if GetPedInVehicleSeat(veh, -1) == ped_s and IsVehicleSirenOn(veh) and GetVehicleClass(veh) == 18 and lightreminder and not disablesiren(veh) then
 			TriggerEvent("lux_vehcontrol:ELSClick", "Beep", 0.3)
 		end
 	end
@@ -106,6 +114,16 @@ function usePowercallAuxSrn(veh)
 	local model = GetEntityModel(veh)
 	for i = 1, #eModelsWithPcall, 1 do
 		if model == GetHashKey(eModelsWithPcall[i]) then
+			return true
+		end
+	end
+	return false
+end
+----------------------------------------------------------------------------------------------------
+function disablesiren(veh)
+	local model = GetEntityModel(veh)
+	for i = 1, #eModelsDisabled, 1 do
+		if model == GetHashKey(eModelsDisabled[i]) then
 			return true
 		end
 	end
@@ -447,7 +465,7 @@ Citizen.CreateThread(function()
 					end
 ----------------------------------------------------------------------------------------------------
 					--- IS EMERG VEHICLE ---
-					if GetVehicleClass(veh) == 18 then
+					if GetVehicleClass(veh) == 18 and not disablesiren(veh) then
 						
 						local actv_manu = false
 						local actv_horn = false
@@ -613,7 +631,7 @@ Citizen.CreateThread(function()
 					end
 ----------------------------------------------------------------------------------------------------
 					--- IS ANY LAND VEHICLE ---	
-					if GetVehicleClass(veh) ~= 14 and GetVehicleClass(veh) ~= 15 and GetVehicleClass(veh) ~= 16 and GetVehicleClass(veh) ~= 21 then
+					if GetVehicleClass(veh) ~= 14 and GetVehicleClass(veh) ~= 15 and GetVehicleClass(veh) ~= 16 and GetVehicleClass(veh) ~= 21 and disablesiren(veh) then
 ----------------------------------------------------------------------------------------------------
 						----- CONTROLS -----
 						if not IsPauseMenuActive() then
@@ -668,7 +686,7 @@ Citizen.CreateThread(function()
 							count_bcast_timer = 0
 ----------------------------------------------------------------------------------------------------
 							--- IS EMERG VEHICLE ---
-							if GetVehicleClass(veh) == 18 then
+							if GetVehicleClass(veh) == 18 and not disablesiren(veh) then
 								TriggerServerEvent("lvc_TogDfltSrnMuted_s", dsrn_mute)
 								TriggerServerEvent("lvc_SetLxSirenState_s", state_lxsiren[veh])
 								TriggerServerEvent("lvc_TogPwrcallState_s", state_pwrcall[veh])
