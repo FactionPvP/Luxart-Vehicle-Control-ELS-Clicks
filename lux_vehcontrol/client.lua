@@ -87,7 +87,7 @@ Citizen.Wait(100)
   player_s = GetPlayerFromServerId(sender)
   ped_s = GetPlayerPed(player_s)
   veh = GetVehiclePedIsUsing(ped_s)
-		Citizen.Wait(7000)
+		Citizen.Wait(12000)
 			if GetPedInVehicleSeat(veh, -1) == ped_s and IsVehicleSirenOn(veh) and GetVehicleClass(veh) == 18 and lightreminder and not disablesiren(veh) then
 			TriggerEvent("lux_vehcontrol:ELSClick", "Beep", 0.3)
 		end
