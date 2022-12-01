@@ -347,6 +347,7 @@ AddEventHandler("lvc_TogIndicState_c", function(sender, newstate)
 	end
 end)
 ----------------------------------------------------------------------------------------------------
+RegisterNetEvent ('lux_vehcontrol:ELSClick')
 AddEventHandler('lux_vehcontrol:ELSClick', function(soundFile, soundVolume)
 SendNUIMessage({
   transactionType     = 'playSound',
